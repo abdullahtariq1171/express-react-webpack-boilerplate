@@ -5,7 +5,7 @@ const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 
-const config = require('../webpack.dev.config.js')
+const config = require('../../webpack.dev.config.js')
 
 const DIST_DIR = __dirname;
 
@@ -20,6 +20,9 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler))
 
+app.use('/api', (req, res) => {
+  res.send('server-dev.js')
+})
 
 app.get('*', (req, res, next) => {
   compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
