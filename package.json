@@ -1,0 +1,22 @@
+{
+  "name": "abdullah-exprss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.config.js",
+    "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js",
+    "start": "node ./dist/server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
