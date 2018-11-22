@@ -1,7 +1,10 @@
 {
-  "name": "abdullah-exprss",
+  "name": "express-react-webpack-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
+  "author": {
+    "name": "Abdullah"
+  },
   "license": "MIT",
   "scripts": {
     "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
@@ -28,5 +31,6 @@
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3",
     "webpack-node-externals": "^1.7.2"
-  }
+  },
+  "homepage": "https://github.com/abdullahtariq1171/express-react-webpack-boilerplate#readme"
 }
