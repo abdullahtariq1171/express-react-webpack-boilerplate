@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.config.js",
-    "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js",
-    "start": "node ./dist/server.js"
+    "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
+    "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
+    "dev": "yarn buildDev && node ./dist/server.js",
+    "prod": "yarn buildProd && node ./dist/server.js"
   },
   "dependencies": {
     "express": "^4.16.4"
@@ -14,9 +15,16 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "webpack": "^4.26.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "next",
+    "mini-css-extract-plugin": "^0.4.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "webpack": "4.19.1",
     "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3",
     "webpack-node-externals": "^1.7.2"
   }
 }
