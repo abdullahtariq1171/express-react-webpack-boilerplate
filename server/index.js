@@ -1,7 +1,12 @@
-console.log("... hhh hello yolo")
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-document.getElementById('root').innerText = 'ddd1'
+const App = () => <h2> hello gys this is me</h2>;
 
-if (module.hot) {
-  module.hot.accept();
-}
+ReactDOM.render(
+  <App /> ,
+  document.getElementById('root') // eslint-disable-line no-undef
+);
+
+module.hot.accept() // eslint-disable-line no-undef 	// Needed for Hot Module Replacement
+module.hot.accept() // eslint-disable-line no-undef
